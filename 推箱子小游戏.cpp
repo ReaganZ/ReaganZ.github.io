@@ -87,12 +87,12 @@ int main()
 		if (flag == 2)                   //游戏赢了
 		{
 			//MessageBox的头文件是Windows.h
-			if (MessageBox(GetHWnd(), "CONGRATULATIONS YOU WIN!NEXT LEVEL?", "WIN", MB_YESNO) == IDYES)         //弹窗:CONGRATULATIONS YOU WIN!NEXT LEVEL?并选择是否继续游戏
+			if (MessageBox(GetHWnd(), "CONGRATULATIONS YOU WIN! NEXT LEVEL?", "WIN", MB_YESNO) == IDYES)         //弹窗:CONGRATULATIONS YOU WIN!NEXT LEVEL?并选择是否继续游戏
 			{
 				level++;                 //下一关
 				if (level == 2)          //判断是否进行到第二关
 				{
-					if (MessageBox(GetHWnd(), "THE LAST LEVEL TRY AGAIN?", "TRY AGAIN", MB_YESNO) == IDYES)     //弹窗:THE LAST LEVEL TRY AGAIN?并选择是否重新开始游戏
+					if (MessageBox(GetHWnd(), "THE LAST LEVEL. TRY AGAIN?", "GAME OVER", MB_YESNO) == IDYES)     //弹窗:THE LAST LEVEL TRY AGAIN?并选择是否重新开始游戏
 					{
 						level = 0;       //重新开始游戏
 					}
@@ -110,7 +110,7 @@ int main()
 
 		else if (flag == 1)               //游戏输了
 		{
-			if (MessageBox(GetHWnd(), "SORRY YOU LOSE!TRY AGAIN?", "LOSE", MB_YESNO) == IDYES)           //弹窗:SORRY YOU LOSE!并且选择是否重新开始当前关卡
+			if (MessageBox(GetHWnd(), "SORRY YOU LOSE! TRY AGAIN?", "LOSE", MB_YESNO) == IDYES)           //弹窗:SORRY YOU LOSE!并且选择是否重新开始当前关卡
 			{
 				Loadmap();               //重新加载本地图
 				drawmap();               //绘图
